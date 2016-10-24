@@ -1,0 +1,12 @@
+<div class="post-preview">
+  <%= link_to post_path(id: post.id) do %>
+        <h2 class="post-title">
+            <%= post.title %>
+        </h2>
+        <h3 class="post-subtitle">
+            <%= post.body.truncate(100) %>
+        </h3>
+    <% end %>
+    <p class="post-meta">Posted by <%= link_to post.author%> on <%= post.created_at%></p>
+</div>
+<hr>

@@ -1,0 +1,12 @@
+  <%= link_to post_path(id: @post.id) do %>
+
+<h2 class="post-title">
+    <%= @post.title %>
+</h2>
+
+<p class="post-meta">Posted by <a href="#"><%= @post.author %></a> on <%= @post.created_at %></p>
+</div>
+
+<%= simple_format(@post.body) %>
+<p class="post-meta">Posted by <%=post.author%> on <%= post.created_at%></p>
+<% end%>
