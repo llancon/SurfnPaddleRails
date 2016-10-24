@@ -1,0 +1,132 @@
+<header>
+    <!--Added header with bootstrap container tag.Ally class was used to creat overall height and background for header. Added fontawesome icon for github pic. -->
+    <div class="container-fluid ">
+        <div class="ocean">
+            <nav class="navbar">
+                <div class="container">
+                    <p class="navbar-text navbar-left" class="navbar-link">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        SURF & PADDLE CO. BLOG
+                        <p class="navbar-text navbar-right search">
+                            About
+                            <a href="#" class="navbar-link">Search</a>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </nav>
+                <div class="text-center">
+                    <h1 class="surf">SURF & PADDLE CO.</h1>
+                    <h6>An Ironyard Academy Project Est. Fall 2013</h6>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+
+
+    </div>
+    <main>
+        <div class="container">
+            <div class="row ">
+                <div class="col-xs-6">
+
+                    <h1 class="headline">A FANTASTIC ENGAGING HEADLINE GOES HERE</h1>
+                    <div class="align-right">
+                        <h6>Anne Marie on
+                            <u class="grayout">Monday Oct. 7th 9:22pm</u>
+                        </h6>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            Locavore ea meggings, deep v gentrify bespoke yr typewriter. Nisi sunt 8-bit craft beer, leggings deep v biodiesel Williamsburg. Actually hashtag art party nesciunt squid pour-over. Kitsch Vice cray. Marfa brunch fingerstache officia Schiltz Blue
+                            Bottle cillium. Mlkshk 8-bit aliquip fingerstache sunt.
+                        </p>
+
+                        <% @posts.first(1).collect do |post| %>
+                        <% @posts.each do |post| %>
+                        <% puts post.created_at.inspect %>
+                        <% end %>
+
+                        <h2>
+                          <%=post.title%>
+                        </h2>
+                        <p>
+                          <%= post.body%>
+                        </p>
+                        <p class="post-meta">Posted by <%=post.author%> on <%= post.created_at%></p>
+                            <% end %>
+                        <p>
+                            Distillery ad sriracha, synth wolf street art bruch excepteur consectetur art party irony figiat. Duis chia yr, pour-over Portland velit High Life non aesthetic figuiat tattooed shabby
+                            <u class="grayout">chic mixtape.</u>
+                        </p>
+                        <div>
+                            <blockquote>
+                                <h3>
+                                    WOAH, THAT'S RADICAL!</h3>
+                            </blockquote>
+                        </div>
+
+                        <p>Swag nisi mixtape cray, non hashtag blog tote bag lolor bitters before they sold out ea dolore. Raw denim mistape drinking vinegar, Vice 3 wolf moon authentic officia aute id. Keffiyeh yr retro, salvia do alique(rollover) leggings selvage narwhal
+                            farm-to-table dolor Tonx DIY photo booth. Bitters gastropub non 3 wolf moon Blue Bottle organic, cray aesthetic jean shorts velit umami. Mlkshk roof party cardigan, farm-to-table aute plaid wolf master cleanse. Thundercats tattoed lo-fi culpa, mollit
+                            Pinterest American Apparel. 3 wolf moon VHS hella, Tonx beard chambray sustainable jean shorts synth mlkshk fugiat excepteur banh mi eu whatever.
+                        </p>
+                        <p>inyl sartorial culpa bespoke labore, ethical redymade tofu selfies ut locavore commodo mumblecore paleo typewriter. Mumblecore selfies nostrud, asymmetrcial 90's fannypack est Blue Bottle ethnic blog. Narwhal Shoreditch fixie tofu, nisi before
+                        </p>
+
+                        <a href="#" class="btn makemegray">Read Comments</a>
+                        <button class="btn makemegray" type="submit">Read Later</button>
+                        <button class="btn makemeblue" type="submit">Share This Post</button>
+                    </div>
+                </div>
+
+                <div class="col-xs-6" id="litword">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-2 col-sm-6 col-md-3 col-md-offset-1 col-lg-7 col-lg-offset-0">
+                        <div class="demo"></div>
+                        <h5 class="text-center">ANNE MARIE</H5>
+                        <h6 class="text-center">
+                            Twitter Facebook Instagram</h6>
+                        <div class="field"></div>
+                        <h6 class="grayout pull-right">
+                            <u>About This Ad</u>
+                        </h6>
+                    </br>
+                    <h5>SIDEBAR SECTION HEADING</h5>
+                    <p class="grayout">Distillery ad sriracha, synth wolf street art brunch excepteur consectetur art party irony fugiat. Duis chia yr, pour-over Portland velit High Life non aesthetic fugiat tattoed shabby chic mixtape.ethical cornhole mustache roof
+                        party proident aesthetic hoodie.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="text-center">
+            MOST POPULAR POSTS</h1>
+        <div class="col-xs-3 img1 text-center"><span>ANOTHER COOL POST</span></div>
+        <div class="col-xs-3 img2"></div>
+        <div class="col-xs-3 img3"></div>
+        <div class="col-xs-3 img4"></div>
+    </div>
+    <div class="bottom">
+        <footer>
+            <%= image_tag("theironyard.jpg", :alt => "Iron Yard Logo") %>
+            <span>The Iron Yard Copyright 2015, All Rights Reserved</span>
+        </footer>
+        <nav>
+            <a href="#" id="item1">Nav Item 1</a>
+            <a href="#" id="item2">Nav Item 2</a>
+            <a href="#" id="item3">Nav Item 3</a>
+            <a href="#" id="item5">Nav Item 5</a>
+        </nav>
+    </div>
+
+</main>
+
+<!-- Scripts go here. -->
+<script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+<script type="text/javascript" src="global.js"></script>
+</body>
+
+</html>
